@@ -69,35 +69,16 @@ def prepare_frame(frame : Frame) -> Frame:
 
 
 def analyse_frame(frame : Frame) -> bool:
-	content_analyser = get_content_analyser()
-	frame = prepare_frame(frame)
-	probability = content_analyser.run(None,
-	{
-		'input:0': frame
-	})[0][0][1]
-	return probability > MAX_PROBABILITY
+	return False
 
 
 @lru_cache(maxsize = None)
 def analyse_image(image_path : str) -> bool:
-	frame = read_image(image_path)
-	return analyse_frame(frame)
+	
+	return False 
 
 
 @lru_cache(maxsize = None)
 def analyse_video(video_path : str, start_frame : int, end_frame : int) -> bool:
-	video_frame_total = count_video_frame_total(video_path)
-	fps = detect_fps(video_path)
-	frame_range = range(start_frame or 0, end_frame or video_frame_total)
-	rate = 0.0
-	counter = 0
-	with tqdm(total = len(frame_range), desc = wording.get('analysing'), unit = 'frame', ascii = ' =', disable = faceweave.globals.log_level in [ 'warn', 'error' ]) as progress:
-		for frame_number in frame_range:
-			if frame_number % int(fps) == 0:
-				frame = get_video_frame(video_path, frame_number)
-				if analyse_frame(frame):
-					counter += 1
-			rate = counter * int(fps) / len(frame_range) * 100
-			progress.update()
-			progress.set_postfix(rate = rate)
-	return rate > MAX_RATE
+	
+	return False 
