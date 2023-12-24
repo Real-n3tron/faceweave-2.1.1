@@ -13,7 +13,7 @@ from faceweave.face_helper import warp_face, paste_back
 from faceweave.content_analyser import clear_content_analyser
 from faceweave.face_store import get_reference_faces
 from faceweave.typing import Face, FaceSet, Frame, Update_Process, ProcessMode, ModelSet, OptionsWithModel
-from faceweave.cli_helper import create_metavar
+from faceweave.common_helper import create_metavar
 from faceweave.filesystem import is_file, is_image, is_video, resolve_relative_path
 from faceweave.download import conditional_download, is_download_done
 from faceweave.vision import read_image, read_static_image, write_image
