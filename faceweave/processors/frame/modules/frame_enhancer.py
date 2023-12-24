@@ -11,7 +11,7 @@ from faceweave import logger, wording
 from faceweave.face_analyser import clear_face_analyser
 from faceweave.content_analyser import clear_content_analyser
 from faceweave.typing import Face, FaceSet, Frame, Update_Process, ProcessMode, ModelSet, OptionsWithModel
-from faceweave.cli_helper import create_metavar
+from faceweave.common_helper import create_metavar
 from faceweave.execution_helper import map_device
 from faceweave.filesystem import is_file, resolve_relative_path
 from faceweave.download import conditional_download, is_download_done
