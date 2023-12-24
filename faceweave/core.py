@@ -19,7 +19,7 @@ from faceweave.vision import get_video_frame, detect_fps, read_image, read_stati
 from faceweave import face_analyser, face_masker, content_analyser, metadata, logger, wording
 from faceweave.content_analyser import analyse_image, analyse_video
 from faceweave.processors.frame.core import get_frame_processors_modules, load_frame_processor_module
-from faceweave.cli_helper import create_metavar
+from faceweave.common_helper import create_metavar
 from faceweave.execution_helper import encode_execution_providers, decode_execution_providers
 from faceweave.normalizer import normalize_output_path, normalize_padding
 from faceweave.filesystem import is_image, is_video, list_module_names, get_temp_frame_paths, create_temp, move_temp, clear_temp
